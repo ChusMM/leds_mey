@@ -30,10 +30,11 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int = 0;
+  int i = 0;
   for (i = 0; i < LEDS_SIZE; i++) {
     blinkAndEvaluate(leds[i]);
   }
+  
 }
 
 void blinkAndEvaluate(int currentLed) {
