@@ -4,6 +4,7 @@
 #define POS_VERDE 1
 #define POS_AMA 2
 #define POS_AZUL 3
+
 #define LEDS_SIZE 4
 
 int si = D2; // pulsador si rojo
@@ -13,10 +14,10 @@ int leds[LEDS_SIZE];
 int ledActive = 0;
 
 void setup() {
-  leds[0] = D5;
-  leds[1] = D6;
-  leds[2] = D4;
-  leds[3] = D8;
+  leds[POS_ROJO] = D5;
+  leds[POS_VERDE] = D6;
+  leds[POS_AMA] = D4;
+  leds[POS_AZUL] = D8;
 
   // put your setup code here, to run once:
   pinMode (leds[POS_ROJO], OUTPUT); // led Rojo salida
