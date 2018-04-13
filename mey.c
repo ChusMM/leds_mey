@@ -12,6 +12,7 @@ int no = D7; // pulsador no rojo
 
 int leds[LEDS_SIZE];
 int ledActive = 0;
+int completed = 0;
 
 void setup() {
   leds[POS_ROJO] = D5;
@@ -31,10 +32,11 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   int i = 0;
-  for (i = 0; i < LEDS_SIZE; i++) {
+  for (i = 0; i < LEDS_SIZE && !completed; i++) {
     blinkAndEvaluate(leds[i]);
+    delay (500);
   }
-  
+  completed = 1;
 }
 
 void blinkAndEvaluate(int currentLed) {
